@@ -58,7 +58,7 @@ KernelQuiz es una aplicación educativa de trivia diseñada para evaluar conocim
 
 1. **Clonar el repositorio**
    ```bash
-   git clone https://github.com/tu-usuario/KernelQuiz.git
+   git clone https://github.com/JeisonAmellSanez/KernelQuiz.git
    cd KernelQuiz
    ```
 
@@ -231,7 +231,7 @@ Las contribuciones son bienvenidas. Para cambios importantes:
 
 ## 🐛 Reportar Problemas
 
-Si encuentras algún bug o tienes una sugerencia, por favor abre un [issue](https://github.com/tu-usuario/KernelQuiz/issues).
+Si encuentras algún bug o tienes una sugerencia, por favor abre un [issue](https://github.com/JeisonAmellSanez/KernelQuiz/issues).
 
 ---
 
@@ -262,9 +262,8 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para
 ## 👨‍💻 Autor
 
 **Jeison Amell**  
-Cipa los ingenieros
 
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
+- GitHub: [@JeisonAmellSanez](https://github.com/JeisonAmellSanez)
 
 ---
 
@@ -281,8 +280,8 @@ Cipa los ingenieros
 
 Para preguntas, sugerencias o colaboraciones:
 
-- **Email:** tu-email@example.com
-- **GitHub:** [Issues](https://github.com/tu-usuario/KernelQuiz/issues)
+- **Email:** amelljeison@gmail.com
+- **GitHub:** [Issues](https://github.com/JeisonAmellSanez/KernelQuiz/issues)
 
 ---
 
@@ -290,7 +289,7 @@ Para preguntas, sugerencias o colaboraciones:
 
 **⭐ Si te gusta este proyecto, dale una estrella en GitHub ⭐**
 
-Desarrollado con ❤️ por **Cipa los ingenieros**
+Desarrollado con ❤️ por **Jeison Amell**
 
 © 2025 KernelQuiz. Todos los derechos reservados.
 
