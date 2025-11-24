@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Dark theme for night mode -->
+    <style name="Base.Theme.QuizSO" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Colores principales en modo oscuro -->
+        <item name="colorPrimary">@color/primary_light</item>
+        <item name="colorPrimaryDark">@color/primary</item>
+        <item name="colorAccent">@color/secondary_light</item>
+        <item name="colorSecondary">@color/secondary_light</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        
+        <!-- Background oscuro -->
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="colorSurface">#1E293B</item>
+        
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

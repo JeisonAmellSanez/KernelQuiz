@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App name -->
+    <string name="app_name">KernelQuiz</string>
+
+    <!-- Login Screen -->
+    <string name="login_title">Inicio de Sesión</string>
+    <string name="hint_username">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="button_login">Iniciar Sesión</string>
+    <string name="error_fields_empty">Completa todos los campos</string>
+    <string name="error_invalid_credentials">Usuario o contraseña incorrectos</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_title">Bienvenido</string>
+    <string name="button_start_quiz">Iniciar Cuestionario</string>
+    <string name="button_logout">Cerrar Sesión</string>
+
+    <!-- Quiz Screen -->
+    <string name="score_label">Puntaje: %.2f / 5.00 (%.1f%%)</string>
+    <string name="button_next">Siguiente</string>
+
+    <!-- Result Screen -->
+    <string name="result_title">¡Cuestionario completado!</string>
+    <string name="result_score">Tu calificación:\n%.2f / 5.00\n(%.1f%%)</string>
+    <string name="button_retry">Reintentar</string>
+
+</resources>

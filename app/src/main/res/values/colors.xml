@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores base -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Paleta principal - Azul y Morado tech -->
+    <color name="primary">#6366F1</color>
+    <color name="primary_dark">#4F46E5</color>
+    <color name="primary_light">#818CF8</color>
+    
+    <color name="secondary">#8B5CF6</color>
+    <color name="secondary_dark">#7C3AED</color>
+    <color name="secondary_light">#A78BFA</color>
+    
+    <!-- Colores de acento -->
+    <color name="accent">#10B981</color>
+    <color name="accent_error">#EF4444</color>
+    <color name="accent_warning">#F59E0B</color>
+    
+    <!-- Backgrounds -->
+    <color name="background">#F8FAFC</color>
+    <color name="background_dark">#0F172A</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F1F5F9</color>
+    
+    <!-- Texto -->
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#64748B</color>
+    <color name="text_hint">#94A3B8</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    
+    <!-- Estados de botones de respuesta -->
+    <color name="answer_correct">#10B981</color>
+    <color name="answer_incorrect">#EF4444</color>
+    <color name="answer_disabled">#E2E8F0</color>
+    
+    <!-- Transparencias -->
+    <color name="overlay_light">#40FFFFFF</color>
+    <color name="overlay_dark">#40000000</color>
+</resources>

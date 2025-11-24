@@ -1,0 +1,531 @@
+package com.example.quizso.utils;
+
+import com.example.quizso.model.Question;
+import com.example.quizso.model.AnswerOption;
+import com.example.quizso.model.Category;
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class QuestionBank {
+    
+    public static List<Question> getQuestions() {
+        return getAllQuestions();
+    }
+    
+    public static List<Question> getQuestionsByCategory(Category category) {
+        if (category == Category.TODOS) {
+            return getAllQuestions();
+        }
+        return getAllQuestions().stream()
+                .filter(q -> q.getCategory() == category)
+                .collect(Collectors.toList());
+    }
+    
+    private static List<Question> getAllQuestions() {
+        List<Question> questions = new ArrayList<>();
+
+        // ==================== PROCESOS (20 preguntas) ====================
+        questions.add(new Question(
+                "¿Qué es un proceso en un sistema operativo?",
+                Arrays.asList(
+                        new AnswerOption("Un archivo de configuración", false),
+                        new AnswerOption("Un programa en ejecución", true),
+                        new AnswerOption("Un tipo de memoria caché", false),
+                        new AnswerOption("Un dispositivo de entrada", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Cuál de los siguientes NO es un estado de un proceso?",
+                Arrays.asList(
+                        new AnswerOption("Listo", false),
+                        new AnswerOption("Ejecutando", false),
+                        new AnswerOption("Bloqueado", false),
+                        new AnswerOption("Compilado", true)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es un hilo (thread)?",
+                Arrays.asList(
+                        new AnswerOption("Un proceso independiente", false),
+                        new AnswerOption("La unidad más pequeña de ejecución en un proceso", true),
+                        new AnswerOption("Un tipo de archivo de sistema", false),
+                        new AnswerOption("Un error de segmentación", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es un proceso huérfano?",
+                Arrays.asList(
+                        new AnswerOption("Un proceso cuyo padre ha terminado", true),
+                        new AnswerOption("Un proceso que consume mucha memoria", false),
+                        new AnswerOption("Un virus informático", false),
+                        new AnswerOption("Un proceso en estado bloqueado", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es un proceso zombie?",
+                Arrays.asList(
+                        new AnswerOption("Un proceso que consume recursos excesivos", false),
+                        new AnswerOption("Un proceso terminado pero aún en la tabla", true),
+                        new AnswerOption("Un proceso infectado por malware", false),
+                        new AnswerOption("Un proceso en modo kernel", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es el kernel?",
+                Arrays.asList(
+                        new AnswerOption("La interfaz gráfica del usuario", false),
+                        new AnswerOption("El núcleo del sistema operativo", true),
+                        new AnswerOption("Un tipo de virus", false),
+                        new AnswerOption("Un archivo de registro", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es el modo usuario vs modo kernel?",
+                Arrays.asList(
+                        new AnswerOption("Diferentes interfaces gráficas", false),
+                        new AnswerOption("Niveles de privilegio para ejecutar instrucciones", true),
+                        new AnswerOption("Tipos de archivos", false),
+                        new AnswerOption("Métodos de compresión", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es un sistema monolítico?",
+                Arrays.asList(
+                        new AnswerOption("Un SO con kernel dividido en módulos", false),
+                        new AnswerOption("Un SO donde el kernel es una sola unidad grande", true),
+                        new AnswerOption("Un SO sin memoria virtual", false),
+                        new AnswerOption("Un SO para dispositivos móviles", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es el PCB (Process Control Block)?",
+                Arrays.asList(
+                        new AnswerOption("Estructura que almacena información del proceso", true),
+                        new AnswerOption("Un tipo de memoria caché", false),
+                        new AnswerOption("Protocolo de comunicación", false),
+                        new AnswerOption("Un comando del sistema", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es el context switch?",
+                Arrays.asList(
+                        new AnswerOption("Cambio de modo usuario a kernel", false),
+                        new AnswerOption("Guardar estado de un proceso y cargar otro", true),
+                        new AnswerOption("Intercambio de memoria", false),
+                        new AnswerOption("Actualización del SO", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es un daemon en Unix/Linux?",
+                Arrays.asList(
+                        new AnswerOption("Un proceso que se ejecuta en segundo plano", true),
+                        new AnswerOption("Un tipo de archivo", false),
+                        new AnswerOption("Un comando de terminal", false),
+                        new AnswerOption("Un error del sistema", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es la multiprogramación?",
+                Arrays.asList(
+                        new AnswerOption("Varios usuarios usando el mismo programa", false),
+                        new AnswerOption("Múltiples programas cargados en memoria simultáneamente", true),
+                        new AnswerOption("Programas escritos en varios lenguajes", false),
+                        new AnswerOption("Ejecutar el mismo programa varias veces", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es el fork() en sistemas Unix?",
+                Arrays.asList(
+                        new AnswerOption("Dividir un archivo en partes", false),
+                        new AnswerOption("Crear un proceso hijo duplicando el padre", true),
+                        new AnswerOption("Terminar un proceso", false),
+                        new AnswerOption("Cambiar prioridad de proceso", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es un proceso en primer plano (foreground)?",
+                Arrays.asList(
+                        new AnswerOption("Proceso que interactúa con el usuario y tiene control del terminal", true),
+                        new AnswerOption("Proceso con máxima prioridad", false),
+                        new AnswerOption("Proceso visible en el escritorio", false),
+                        new AnswerOption("Proceso del kernel", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es la syscall (llamada al sistema)?",
+                Arrays.asList(
+                        new AnswerOption("Solicitud de un programa al kernel para realizar operación", true),
+                        new AnswerOption("Llamada telefónica del sistema", false),
+                        new AnswerOption("Función de biblioteca", false),
+                        new AnswerOption("Comando de terminal", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es el time quantum en planificación?",
+                Arrays.asList(
+                        new AnswerOption("Tiempo asignado a un proceso en Round Robin", true),
+                        new AnswerOption("Velocidad del procesador", false),
+                        new AnswerOption("Tiempo de arranque del SO", false),
+                        new AnswerOption("Intervalo de respaldo", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué hace la llamada exec() en Unix?",
+                Arrays.asList(
+                        new AnswerOption("Ejecuta comandos del shell", false),
+                        new AnswerOption("Reemplaza el proceso actual con un nuevo programa", true),
+                        new AnswerOption("Duplica un proceso", false),
+                        new AnswerOption("Termina un proceso", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es el PID (Process ID)?",
+                Arrays.asList(
+                        new AnswerOption("Identificador único numérico de un proceso", true),
+                        new AnswerOption("Prioridad del proceso", false),
+                        new AnswerOption("Puerto de comunicación", false),
+                        new AnswerOption("Tipo de procesador", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es un proceso cooperativo?",
+                Arrays.asList(
+                        new AnswerOption("Proceso que puede afectar o ser afectado por otros procesos", true),
+                        new AnswerOption("Proceso que ayuda al usuario", false),
+                        new AnswerOption("Proceso que trabaja en red", false),
+                        new AnswerOption("Proceso multihilo", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es el IPC (Inter-Process Communication)?",
+                Arrays.asList(
+                        new AnswerOption("Mecanismo para que procesos intercambien datos", true),
+                        new AnswerOption("Protocolo de internet", false),
+                        new AnswerOption("Tipo de procesador", false),
+                        new AnswerOption("Instrucción del CPU", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        // ==================== MEMORIA ====================
+        questions.add(new Question(
+                "¿Qué es la memoria virtual?",
+                Arrays.asList(
+                        new AnswerOption("Memoria RAM adicional en la nube", false),
+                        new AnswerOption("Técnica para usar disco como extensión de RAM", true),
+                        new AnswerOption("Memoria usada solo por el kernel", false),
+                        new AnswerOption("Memoria volátil de alta velocidad", false)
+                ),
+                Category.MEMORIA
+        ));
+
+        questions.add(new Question(
+                "¿Qué es la fragmentación externa?",
+                Arrays.asList(
+                        new AnswerOption("Espacio libre en memoria dividido en bloques pequeños", true),
+                        new AnswerOption("Archivos dañados en disco", false),
+                        new AnswerOption("Procesos que consumen mucha CPU", false),
+                        new AnswerOption("Errores en la compilación", false)
+                ),
+                Category.MEMORIA
+        ));
+
+        questions.add(new Question(
+                "¿Qué es el swapping?",
+                Arrays.asList(
+                        new AnswerOption("Intercambiar datos entre CPU y GPU", false),
+                        new AnswerOption("Mover procesos entre memoria y disco", true),
+                        new AnswerOption("Cambiar contraseñas de usuario", false),
+                        new AnswerOption("Actualizar el kernel", false)
+                ),
+                Category.MEMORIA
+        ));
+
+        questions.add(new Question(
+                "¿Qué es la paginación?",
+                Arrays.asList(
+                        new AnswerOption("Dividir la memoria en bloques fijos llamados páginas", true),
+                        new AnswerOption("Imprimir documentos desde la terminal", false),
+                        new AnswerOption("Crear copias de seguridad", false),
+                        new AnswerOption("Organizar archivos por carpetas", false)
+                ),
+                Category.MEMORIA
+        ));
+
+        questions.add(new Question(
+                "¿Qué es el TLB (Translation Lookaside Buffer)?",
+                Arrays.asList(
+                        new AnswerOption("Un tipo de disco duro", false),
+                        new AnswerOption("Una caché para traducciones de direcciones virtuales", true),
+                        new AnswerOption("Un protocolo de red", false),
+                        new AnswerOption("Un error de segmentación", false)
+                ),
+                Category.MEMORIA
+        ));
+
+        // ==================== ARCHIVOS ====================
+        questions.add(new Question(
+                "¿Cuál es la función del sistema de archivos?",
+                Arrays.asList(
+                        new AnswerOption("Gestionar la red", false),
+                        new AnswerOption("Administrar procesos en segundo plano", false),
+                        new AnswerOption("Organizar y almacenar archivos en dispositivos", true),
+                        new AnswerOption("Controlar la impresora", false)
+                ),
+                Category.ARCHIVOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es un descriptor de archivo?",
+                Arrays.asList(
+                        new AnswerOption("Un ícono en el escritorio", false),
+                        new AnswerOption("Una referencia usada por el SO para acceder a un archivo abierto", true),
+                        new AnswerOption("Un tipo de compresión", false),
+                        new AnswerOption("Un error de E/S", false)
+                ),
+                Category.ARCHIVOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es un inodo en sistemas Unix/Linux?",
+                Arrays.asList(
+                        new AnswerOption("Estructura que contiene metadatos de un archivo", true),
+                        new AnswerOption("Un tipo de proceso del sistema", false),
+                        new AnswerOption("Una partición del disco", false),
+                        new AnswerOption("Un comando de terminal", false)
+                ),
+                Category.ARCHIVOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es el journaling en sistemas de archivos?",
+                Arrays.asList(
+                        new AnswerOption("Comprimir archivos automáticamente", false),
+                        new AnswerOption("Registro de operaciones para recuperación ante fallos", true),
+                        new AnswerOption("Crear respaldos diarios", false),
+                        new AnswerOption("Escanear virus en archivos", false)
+                ),
+                Category.ARCHIVOS
+        ));
+
+        // ==================== PLANIFICACIÓN ====================
+        questions.add(new Question(
+                "¿Qué es la planificación (scheduling) en un SO?",
+                Arrays.asList(
+                        new AnswerOption("Asignar memoria a procesos", false),
+                        new AnswerOption("Decidir qué proceso se ejecuta en la CPU", true),
+                        new AnswerOption("Gestionar la entrada/salida", false),
+                        new AnswerOption("Crear nuevos usuarios", false)
+                ),
+                Category.PLANIFICACION
+        ));
+
+        questions.add(new Question(
+                "¿Qué algoritmo de planificación asigna turnos iguales a cada proceso?",
+                Arrays.asList(
+                        new AnswerOption("FCFS", false),
+                        new AnswerOption("SJF", false),
+                        new AnswerOption("Round Robin", true),
+                        new AnswerOption("Prioridad", false)
+                ),
+                Category.PLANIFICACION
+        ));
+
+        questions.add(new Question(
+                "¿Qué significa SJF en algoritmos de planificación?",
+                Arrays.asList(
+                        new AnswerOption("Super Jump Function", false),
+                        new AnswerOption("Shortest Job First", true),
+                        new AnswerOption("System Job Formatter", false),
+                        new AnswerOption("Scheduled Jump Flow", false)
+                ),
+                Category.PLANIFICACION
+        ));
+
+        questions.add(new Question(
+                "¿Qué es la inanición (starvation) en planificación?",
+                Arrays.asList(
+                        new AnswerOption("Proceso que nunca obtiene CPU porque otros tienen mayor prioridad", true),
+                        new AnswerOption("Memoria RAM llena", false),
+                        new AnswerOption("Disco duro sin espacio", false),
+                        new AnswerOption("CPU sobrecalentada", false)
+                ),
+                Category.PLANIFICACION
+        ));
+
+        // ==================== CONCURRENCIA ====================
+        questions.add(new Question(
+                "¿Qué es el deadlock (interbloqueo)?",
+                Arrays.asList(
+                        new AnswerOption("Cuando dos procesos esperan recursos que posee el otro", true),
+                        new AnswerOption("Cuando la CPU se sobrecalienta", false),
+                        new AnswerOption("Cuando se llena el disco duro", false),
+                        new AnswerOption("Cuando un proceso termina abruptamente", false)
+                ),
+                Category.CONCURRENCIA
+        ));
+
+        questions.add(new Question(
+                "¿Qué es la sección crítica?",
+                Arrays.asList(
+                        new AnswerOption("Código que accede a recursos compartidos", true),
+                        new AnswerOption("Una parte del disco duro", false),
+                        new AnswerOption("El modo de seguridad del SO", false),
+                        new AnswerOption("Un tipo de proceso zombie", false)
+                ),
+                Category.CONCURRENCIA
+        ));
+
+        questions.add(new Question(
+                "¿Qué es un semáforo en sistemas operativos?",
+                Arrays.asList(
+                        new AnswerOption("Una señal de tráfico en la interfaz", false),
+                        new AnswerOption("Mecanismo de sincronización para controlar acceso a recursos", true),
+                        new AnswerOption("Un tipo de archivo de sistema", false),
+                        new AnswerOption("Una herramienta de debugging", false)
+                ),
+                Category.CONCURRENCIA
+        ));
+
+        questions.add(new Question(
+                "¿Qué es una condición de carrera (race condition)?",
+                Arrays.asList(
+                        new AnswerOption("Competencia por recursos de CPU", false),
+                        new AnswerOption("Resultado depende del orden de ejecución de procesos concurrentes", true),
+                        new AnswerOption("Proceso que ejecuta muy rápido", false),
+                        new AnswerOption("Error de compilación", false)
+                ),
+                Category.CONCURRENCIA
+        ));
+
+        // ==================== ENTRADA/SALIDA ====================
+        questions.add(new Question(
+                "¿Qué es DMA (Direct Memory Access)?",
+                Arrays.asList(
+                        new AnswerOption("Acceso directo a memoria sin intervención de CPU", true),
+                        new AnswerOption("Un tipo de memoria RAM", false),
+                        new AnswerOption("Un protocolo de red", false),
+                        new AnswerOption("Un comando de terminal", false)
+                ),
+                Category.ENTRADA_SALIDA
+        ));
+
+        questions.add(new Question(
+                "¿Qué es el buffering en E/S?",
+                Arrays.asList(
+                        new AnswerOption("Comprimir datos antes de escribir", false),
+                        new AnswerOption("Almacenar temporalmente datos en memoria durante transferencia", true),
+                        new AnswerOption("Encriptar información", false),
+                        new AnswerOption("Borrar datos automáticamente", false)
+                ),
+                Category.ENTRADA_SALIDA
+        ));
+
+        questions.add(new Question(
+                "¿Qué es el spooling?",
+                Arrays.asList(
+                        new AnswerOption("Técnica para gestionar trabajos de impresión en cola", true),
+                        new AnswerOption("Resetear dispositivos de E/S", false),
+                        new AnswerOption("Actualizar drivers", false),
+                        new AnswerOption("Optimizar disco duro", false)
+                ),
+                Category.ENTRADA_SALIDA
+        ));
+
+        // ==================== MÁS PREGUNTAS GENERALES ====================
+        questions.add(new Question(
+                "¿Qué es el kernel?",
+                Arrays.asList(
+                        new AnswerOption("La interfaz gráfica del usuario", false),
+                        new AnswerOption("El núcleo del sistema operativo", true),
+                        new AnswerOption("Un tipo de virus", false),
+                        new AnswerOption("Un archivo de registro", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es un sistema operativo de tiempo real?",
+                Arrays.asList(
+                        new AnswerOption("Un SO que responde en un tiempo predecible", true),
+                        new AnswerOption("Un SO que solo funciona en servidores", false),
+                        new AnswerOption("Un SO sin interfaz gráfica", false),
+                        new AnswerOption("Un SO para videojuegos", false)
+                ),
+                Category.PLANIFICACION
+        ));
+
+        questions.add(new Question(
+                "¿Qué es un sistema monolítico?",
+                Arrays.asList(
+                        new AnswerOption("Un SO con kernel dividido en módulos", false),
+                        new AnswerOption("Un SO donde el kernel es una sola unidad grande", true),
+                        new AnswerOption("Un SO sin memoria virtual", false),
+                        new AnswerOption("Un SO para dispositivos móviles", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es el modo usuario vs modo kernel?",
+                Arrays.asList(
+                        new AnswerOption("Diferentes interfaces gráficas", false),
+                        new AnswerOption("Niveles de privilegio para ejecutar instrucciones", true),
+                        new AnswerOption("Tipos de archivos", false),
+                        new AnswerOption("Métodos de compresión", false)
+                ),
+                Category.PROCESOS
+        ));
+
+        questions.add(new Question(
+                "¿Qué es un sistema distribuido?",
+                Arrays.asList(
+                        new AnswerOption("Un SO que corre en múltiples computadoras interconectadas", true),
+                        new AnswerOption("Un SO sin conexión a internet", false),
+                        new AnswerOption("Un SO para una sola CPU", false),
+                        new AnswerOption("Un tipo de base de datos", false)
+                ),
+                Category.CONCURRENCIA
+        ));
+
+        return questions;
+    }
+}
